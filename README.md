@@ -16,3 +16,11 @@ The Spark ETL process involves the following transformation steps on the  data:
 For Further details see these Notebooks:
 [NYC_taxi_ETL1 .ipynb](https://github.com/mervat-khaled/ETL-Apache-Spark-NYC-Taxi-Data/blob/main/NYC_taxi_ETL1%20.ipynb)
 [NYC_taxi_ETL2 .ipynb](https://github.com/mervat-khaled/ETL-Apache-Spark-NYC-Taxi-Data/blob/main/NYC_taxi_ETL2%20.ipynb)
+
+# Technologies Used
+Dockerized Apache spark 3.5.0 to process the data, and store the results into CSVs Files.
+
+#### Spark image environment:
+
+![Screenshots/image_config.png](Screenshots/image_config.png)
+
