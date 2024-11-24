@@ -44,3 +44,9 @@ We need to compute:
 1. The average time it takes for a taxi to find its next fare(trip) per destination borough,
 2. The number of trips that started and ended within the same borough.
 
+# Steps:
+To carry out the required analysis, we had to deal with two types of data: temporal data, such as dates and times, and geospatial information, like points of longitude and latitude and spatial boundaries.
+As the data given in the taxi ride data set shows just the longitude and latitude of both the pickup and drop-off locations, we needed to enrich this data set with boroughs of the respective locations. For this, we had to load another data set that specifies the boundaries of each borough in GeoJson format, data is supplied as a separate [file](https://github.com/mervat-khaled/ETL-Apache-Spark-NYC-Taxi-Data/blob/main/data/nyc-boroughs.geojson?short_path=a7cec63). So we created a data frame out of it and broadcasted it to different workers to join it with the largest data frame. 
+To enrich the taxi ride data set with pick up and drop off boroughs names, we needed to query the GeoJson data for the name of the borough for which the long/lat of the pick up drop off belongs. To achieve this goal, we used the geometry library [shapely] (https://shapely.readthedocs.io/en/stable/) which provides several APIs to handle geometric shapes, among which to query about the inclusion of shape in another shape in another shape.
+To let Spark handle these, we defined them as user-defined functions UDFs, as follows: 
+
