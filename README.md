@@ -13,4 +13,6 @@ The Spark ETL process involves the following transformation steps on the  data:
 #### Column Dropping: Remove unnecessary columns that have more than %90 null values.
 #### DataFrame Join: Combine data from multiple data frames to create a unified dataset.
 
-For Further details see these [Notebooks]([NYC_taxi_ETL1 .ipynb](https://github.com/mervat-khaled/ETL-Apache-Spark-NYC-Taxi-Data/blob/main/NYC_taxi_ETL1%20.ipynb))
+For Further details see these Notebooks:
+[NYC_taxi_ETL1 .ipynb](https://github.com/mervat-khaled/ETL-Apache-Spark-NYC-Taxi-Data/blob/main/NYC_taxi_ETL1%20.ipynb)
+[NYC_taxi_ETL2 .ipynb](https://github.com/mervat-khaled/ETL-Apache-Spark-NYC-Taxi-Data/blob/main/NYC_taxi_ETL2%20.ipynb)
