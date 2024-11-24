@@ -52,7 +52,7 @@ To let Spark handle these, we defined them as user-defined functions UDFs, as fo
 ![Screenshots/broadcast.png](Screenshots/broadcast.png)
 ![Screenshots/UDF_shapely.png](Screenshots/UDF_shapely.png)
 
-Then I saved Joined data as CSVs files partitioned by the number of cores/executors on Spark session.
+Then we saved Joined data as CSVs files partitioned by the number of cores/executors on Spark session.
 
 ![Screenshots/CSVs.png](Screenshots/CSVs.png)
 
