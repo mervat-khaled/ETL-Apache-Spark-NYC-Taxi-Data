@@ -49,11 +49,11 @@ To carry out the required analysis, we had to deal with two types of data: tempo
 As the data given in the taxi ride data set shows just the longitude and latitude of both the pickup and drop-off locations, we needed to enrich this data set with boroughs of the respective locations. For this, we had to load another data set that specifies the boundaries of each borough in GeoJson format, data is supplied as a separate [file](https://github.com/mervat-khaled/ETL-Apache-Spark-NYC-Taxi-Data/blob/main/data/nyc-boroughs.geojson?short_path=a7cec63). So we created a data frame out of it and broadcasted it to different workers to join it with the largest data frame. 
 To enrich the taxi ride data set with pick up and drop off boroughs names, we needed to query the GeoJson data for the name of the borough for which the long/lat of the pick up drop off belongs. To achieve this goal, we used the geometry library [shapely](https://shapely.readthedocs.io/en/stable/) which provides several APIs to handle geometric shapes, among which to query about the inclusion of shape in another shape in another shape.
 To let Spark handle these, we defined them as user-defined functions UDFs, as follows: 
-[Screenshots/broadcast.png](Screenshots/broadcast.png)
-[Screenshots/UDF_shapely.png](Screenshots/UDF_shapely.png)
+![Screenshots/broadcast.png](Screenshots/broadcast.png)
+![Screenshots/UDF_shapely.png](Screenshots/UDF_shapely.png)
 
 Then I saved Joined data as CSVs files partitioned by the number of cores/executors on Spark session.
 
-[Screenshots/CSVs.png](Screenshots/CSVs.png)
+![Screenshots/CSVs.png](Screenshots/CSVs.png)
 
 
