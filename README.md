@@ -56,4 +56,21 @@ Then we saved Joined data as CSVs files partitioned by the number of cores/execu
 
 ![Screenshots/CSVs.png](Screenshots/CSVs.png)
 
+# Analysis
+1- The number of trips that started and ended within the same borough
+![Screenshots/first_query.png](Screenshots/first_query.png)
+
+2- The average time it takes for a taxi to find its next fare(trip) per destination borough.
+
+To answer this question I used the the lead window function with SQL statement:
+![Screenshots/window_function.png](Screenshots/window_function.png)
+
+The answer of the question was:
+![Screenshots/window_function2.png](Screenshots/window_function2.png)
+
+The Unknown borough name here is most likely to be that the drop-off was in another borough. 
+The average wait time for a taxi from one borough to another is longer than the average wait in the same borough.
+
+
+
 
