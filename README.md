@@ -62,7 +62,7 @@ Then we saved Joined data as CSVs files partitioned by the number of cores/execu
 
 2- The average time it takes for a taxi to find its next fare(trip) per destination borough.
 
-To answer this question I used the the lead window function with SQL statement:
+To answer this question I used the lead window function with SQL statement:
 ![Screenshots/window_function.png](Screenshots/window_function.png)
 
 The answer of the question was:
